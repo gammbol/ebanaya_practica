@@ -1,0 +1,10 @@
+.code {
+    color: blueviolet;
+}
+
+.code_block {
+    max-width: 300px;
+    position: relative;
+    border: 1px solid #edf2f5;
+    background-color: #f1f5f7;
+}

@@ -93,7 +93,7 @@ p {
 }
 
 
-.code_block {
+.code_block_1 {
     display: grid;
     background-color: hsl(200deg 27% 96%);
     grid-template-rows: repeat(4, 1fr);
@@ -101,24 +101,51 @@ p {
     padding: 1em;
     overflow: auto;
     white-space: pre;
-    height: 20vh;
+    height: auto;
     position: relative;
-    max-width: 37vw;
-    min-width: 400px;
-    overflow-y: hidden;
+    max-width: 40vw;
+    min-width: 24.7em;
     margin-bottom: 3.5vh;
 }
 
-.code_block::before {
+.code_block_1::before {
     content: '';
     position: absolute;
     top: 0px;
     left: 0px;
     width: 5px;
-    height: 22vh;
+    height: 24vh;
     background-color: #b4cddd;
 }
 
-/* .danger {
-    color: red;
-} */
+
+
+.code_block_2 {
+    display: grid;
+    background-color: hsl(200deg 27% 96%);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: 3vw 1fr;
+    gap: 20px;
+    padding: 1em;
+    overflow: auto;
+    white-space: pre;
+    height: auto;
+    position: relative;
+    max-width: 40vw;
+    min-width: 24.7em;
+    margin-bottom: 3.5vh;
+}
+
+.code_block_2::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5px;
+    height: 42vh;
+    background-color: #b4cddd;
+}
+
+ol {
+    line-height: 1em;
+}

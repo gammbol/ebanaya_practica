@@ -19,7 +19,7 @@
 
     </header>
     
-    <div class="content">
+    <div style="width: 65vw;" class="content">
 
         <div id="chapter-1">
             <h2>Подготовка</h2>
@@ -129,12 +129,57 @@
 
         </div>
 
+        <div class="chapter-3">
+
+            <h2>Практика</h2>
+            <p class="dhh">
+                Итак, как и в прошлый раз, мы начинаем с обращения к <a href="https://t.me/botfather">@BotFather</a> и получаем токен для бота.
+            </p>
+            <img clasxs="img-1" src="images/get_token.png" alt="Получение токена">
+            <p>Далее снова сохраняем токен и создаем скелет нашей программы</p>
+
+            <div class="code_block_3">
+                <div>mport telebot</div>
+                <div>TOKEN = '5436079033:AAFs3CEDSD4fE9x-xJAalNKSMhvTiemzcts'</div>
+                <div>bot = telebot.TeleBot(TOKEN)</div>
+                <div>bot.polling(none_stop=True)</div>
+            </div>
+
+            <p>
+                Поскольку нам нужно, чтобы бот зеркалил абсолютно все сообщения, то используем фильтр <span class="code">content_types=['text']</span>. 
+            </p>
+            <div class="code_block_4">
+                <div style="grid-column: 1 / 3;">@bot.message_handler(content_types=['text'])</div>
+                <div style="grid-column: 1 / 3;">def mirror_func(message):</div>
+                <div style="grid-column: 2 / 3;">...</div>   
+            </div>
+            
+            <p>
+                Теперь обращаемся к методу <span class="code">send_message()</span>, 1-м аргументом передаем чат, в который надо отправить сообщение, 2-м аргументом - то, что нужно отправить, в нашем случае текст самого сообщения.
+            </p>
+            <div class="code_block_5">
+                <div style="grid-column: 1 / 3;">@bot.message_handler(content_types=['text'])</div>
+                <div style="grid-column: 1 / 3;">def mirror_func(message):</div>
+                <div style="grid-column: 2 / 3;">bot.send_message(message.chat.id, message.text)</div>                     
+            </div>
+
+            <p>В итоге у нас получилась такая программа:</p>
+            <div class="code_block_6">
+                <div style="grid-column: 1 / 3;">import telebot</div>
+                <div style="grid-column: 1 / 3;">TOKEN = '5436079033:AAFs3CEDSD4fE9x-xJAalNKSMhvTiemzcts'</div>
+                <div style="grid-column: 1 / 3;">bot = telebot.TeleBot(TOKEN)</div>
+                <div style="grid-column: 1 / 3;">@bot.message_handler(content_types=['text'])</div>
+                <div style="grid-column: 1 / 3;">def mirror_func(message):</div>
+                <div style="grid-column: 2 / 3;">bot.send_message(message.chat.id, message.text)</div>
+                <div style="grid-column: 1 / 3;">bot.polling(none_stop=True)</div>
+            </div>
+
+            <p class="dhh">Теперь остается только запустить ее, и наш бот заработает!</p>
+            <img class="img-2" src="images/result.png" alt="Результат">
+
+        </div>
 
     </div>
-
-
-
-
 
 
 </body>

@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;700&display=swap');
+
+.code {
+    color: blueviolet;
+}
+
+.image {
+    position: absolute;
+}
+
+.image img {
+    height: 100vh;
+    width: 100vw;
+}
+
+html {
+    padding: 0px;
+    margin: 0px;
+    top: 0px;
+    box-sizing: border-box;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+body {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    padding: 0px;
+    margin: 0px;
+    height: 100vh;
+    width: 100%;
+}
+
+.shadow {
+    position: absolute;
+    background-color: black;
+    opacity: 65%;
+    height: 100vh;
+    width: 100vw;
+    padding: 0px;
+    margin: 0px;
+    
+}
+
+#header-h1 {
+    position: relative;
+    font-family: 'Comfortaa', cursive;
+    color: white;
+    font-size: 5vw;
+    padding-left: 6rem;
+    width: 50vw;
+    height: 100vh;
+    margin: 0;
+    padding-top: 30vw;
+}
+
+
+#chapter-1 h2 {
+    text-align: center;
+}
+
+#chapter-1 ol {
+    padding: 0 5vw;
+}
+
+p {
+    font-weight: 300;    
+}
+
+
+/* ==================================================================== */
+
+.content {
+    display: grid;
+    padding: 0px 3vw;
+    row-gap: 7vh;
+
+    font-weight: 400;
+    font-family: 'Comfortaa', cursive;
+
+    top: 15vw;
+    width: 94vw;
+    overflow: auto;
+
+    margin-bottom: 5vh;
+}
+
+.ch-2_h2 {
+    text-align: center;
+}
+
+
+.code_block {
+    display: grid;
+    background-color: hsl(200deg 27% 96%);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+    padding: 1em;
+    overflow: auto;
+    white-space: pre;
+    height: 20vh;
+    position: relative;
+    max-width: 37vw;
+    min-width: 400px;
+    overflow-y: hidden;
+    margin-bottom: 3.5vh;
+}
+
+.code_block::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 5px;
+    height: 22vh;
+    background-color: #b4cddd;
+}
+
+/* .danger {
+    color: red;
+} */
